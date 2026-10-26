@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1B098B">
+
+    <!-- University header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.22"
+        android:background="#1B098B">
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom|start"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:background="#FFFFFF">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:src="@drawable/logo"
+                android:scaleType="fitCenter"
+                android:contentDescription="University logo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="សាកលវិទ្យាល័យ អាស៊ីអាគ្នេយ៍"
+                    android:textColor="#1B098B"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UNIVERSITY OF SOUTH-EAST ASIA"
+                    android:textColor="#444444"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Library background and login form -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.48">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img"
+            android:scaleType="centerCrop"
+            android:contentDescription="Library background" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#22000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="4dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/library"
+                android:scaleType="centerCrop"
+                android:contentDescription="Library logo"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="LIBRARY"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="7dp"
+                android:background="#FFFFFF"
+                android:hint="  Input Username"
+                android:inputType="text"
+                android:paddingStart="9dp"
+                android:paddingEnd="7dp"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textColorHint="#777777"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:hint="  Input Password"
+                android:inputType="textPassword"
+                android:paddingStart="9dp"
+                android:paddingEnd="7dp"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textColorHint="#777777"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="end|center_vertical"
+                android:text="Forgot Password?"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Login button and registration -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30"
+        android:orientation="vertical"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="9dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="#1B098B">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="82dp"
+            android:layout_height="37dp"
+            android:backgroundTint="#E0000C"
+            android:text="LOG IN"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:text="Don't have account??"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
