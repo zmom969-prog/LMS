@@ -72,9 +72,9 @@
 
         <EditText
             android:id="@+id/etName"
-            style="@style/ProfileInput"
+            style="@style/PInput"
             android:hint="Name"
-            android:text="Ye Haoran"
+            android:text="Allie"
             android:inputType="textPersonName" />
 
         <!-- Username -->

@@ -1,5 +1,6 @@
 package com.example.lms;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -25,5 +26,21 @@ public class Profile extends AppCompatActivity {
         btnPrivacy = findViewById(R.id.btnPrivacy);
         btnLogout = findViewById(R.id.btnLogout);
 
+        //Intent
+
+        btnEditeProfile.setOnClickListener(v -> {
+            Intent i = new Intent(
+                    Profile.this,
+                    EditeProfile.class
+            );
+            startActivity(i);
+        });
+
+        btnSittings.setOnClickListener(v -> {
+            Intent intent = new Intent(Profile.this, Settings.class);
+            startActivity(intent);
+        });
+
     }
+
 }
