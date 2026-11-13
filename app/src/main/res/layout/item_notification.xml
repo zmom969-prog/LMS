@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardNotification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#E96B68"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- រូបតំណាងនាឡិកាខាងឆ្វេង -->
+        <ImageView
+            android:id="@+id/imgClock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_clock"
+            app:tint="#FFFFFF" />
+
+        <!-- ប៊ូតុងបិទ (X) ខាងលើស្ដាំ -->
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_close"
+            app:tint="#000000" />
+
+        <!-- អក្សរ Yesterday -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnClose"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:text="Yesterday"
+            android:textColor="#F2F2F2"
+            android:textSize="11sp" />
+
+        <!-- ចំណងជើងសៀវភៅ -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgClock"
+            android:layout_toStartOf="@id/tvTime"
+            android:layout_marginTop="8dp"
+            android:text="Atomic Habits"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- ខ្លឹមសារជូនដំណឹង -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_toEndOf="@id/imgClock"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="Due on sept 30. tap below to extend your borrow period for 15 days more"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
