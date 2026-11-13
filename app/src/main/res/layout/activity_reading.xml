@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="#000000"
+            android:textSize="42sp"
+            android:layout_gravity="start|center_vertical"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </FrameLayout>
+
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Book Image and Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/imgBook"
+                    android:layout_width="140dp"
+                    android:layout_height="208dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book"
+                    android:contentDescription="Book cover" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Title"
+                        android:textSize="23sp"
+                        android:textColor="#111111" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="----------------"
+                        android:textSize="17sp"
+                        android:textColor="#111111" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="----------------"
+                        android:textSize="17sp"
+                        android:textColor="#111111" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="----------------"
+                        android:textSize="17sp"
+                        android:textColor="#111111" />
+
+                    <!-- Borrow and Read Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="28dp">
+
+                        <Button
+                            android:id="@+id/btnBorrow"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#061599"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:stateListAnimator="@null"
+                            android:text="Borrow"
+                            android:textColor="#FDFBFB"
+                            android:textSize="17sp" />
+
+                        <Button
+                            android:id="@+id/btnRead"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#F12333"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:stateListAnimator="@null"
+                            android:text="Read"
+                            android:textColor="#F9F9FA"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Favorite -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add to favorite book"
+                android:textSize="19sp"
+                android:textColor="#111111" />
+
+
+            <ImageView
+                android:id="@+id/btnFavorite"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/heart_icon"
+                android:scaleType="fitCenter"
+                android:contentDescription="Add to favorite"
+                android:clickable="true"
+                android:focusable="true" />
+
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Description"
+                android:textSize="22sp"
+                android:textColor="#111111" />
+
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="--------------------------------\n\n--------------------------------\n\n--------------------------------"
+                android:textSize="17sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="#111111" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="8dp">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#0066FF"/>
+
+        </LinearLayout>
+
+        <!-- Book -->
+        <LinearLayout
+            android:id="@+id/navBook"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/book_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book"
+                android:textColor="#0066FF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Borrow -->
+        <LinearLayout
+            android:id="@+id/navBorrow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/borrow_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Borrow"
+                android:textSize="12sp"
+                android:textColor="#0066FF"/>
+
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/profile_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#0066FF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

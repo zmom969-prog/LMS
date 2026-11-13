@@ -45,10 +45,21 @@ public class Profile extends AppCompatActivity {
         });
 
         backButton.setOnClickListener(v -> {
-            Intent i = new Intent(Profile.this, Borrow_History.class);
+            Intent i = new Intent(Profile.this, MainActivity.class);
             startActivity(i);
         });
 
+
+        btnLogout.setOnClickListener(v -> {
+            Intent i = new Intent(Profile.this, Reading.class);
+            startActivity(i);
+        });
+
+
+        btnNotifications.setOnClickListener(v -> {
+            Intent i = new Intent(Profile.this,Borrow_History.class);
+            startActivity(i);
+        });
     }
 
 }

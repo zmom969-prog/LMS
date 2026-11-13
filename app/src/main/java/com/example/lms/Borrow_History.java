@@ -23,7 +23,7 @@ public class Borrow_History extends AppCompatActivity {
     private BorrowHistoryAdapter adapter;
     private List<BorrowHistoryModel> historyList;
     private Spinner spinnerFilter;
-    private ImageView btnBack;
+    private ImageView btnBack, BookCover;
     private TextView backButton;
 
     @Override
@@ -50,6 +50,9 @@ public class Borrow_History extends AppCompatActivity {
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, filters);
         spinnerFilter.setAdapter(spinnerAdapter);
 
+
+        BookCover =findViewById(R.id.BookCover);
+
         // Populate mock data matching the screenshot design[cite: 1]
         historyList = new ArrayList<>();
         historyList.add(new BorrowHistoryModel(
@@ -73,6 +76,22 @@ public class Borrow_History extends AppCompatActivity {
                 "Normal People Sally Rooney",
                 "Tuesday, 4 July 2026 - Friday, 30 July 2026"
         ));
+
+
+
+        //Intent
+        BookCover.setOnClickListener(v -> {
+            Intent i = new Intent(
+                    Borrow_History.this,
+                    Reading.class
+            );
+            startActivity(i);
+        });
+
+        btnBack.setOnClickListener(v -> {
+            Intent i = new Intent(Borrow_History.this, Profile.class);
+            startActivity(i);
+        });
 
 
     }
