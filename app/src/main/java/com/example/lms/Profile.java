@@ -3,6 +3,7 @@ package com.example.lms;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Profile extends AppCompatActivity {
+    private TextView backButton;
     private Button btnEditeProfile, btnSittings, btnLanguage, btnNotifications, btnPrivacy, btnLogout;
 
     @Override
@@ -25,6 +27,7 @@ public class Profile extends AppCompatActivity {
         btnNotifications = findViewById(R.id.btnNotifications);
         btnPrivacy = findViewById(R.id.btnPrivacy);
         btnLogout = findViewById(R.id.btnLogout);
+        backButton = findViewById(R.id.backButton);
 
         //Intent
 
@@ -39,6 +42,11 @@ public class Profile extends AppCompatActivity {
         btnSittings.setOnClickListener(v -> {
             Intent intent = new Intent(Profile.this, Settings.class);
             startActivity(intent);
+        });
+
+        backButton.setOnClickListener(v -> {
+            Intent i = new Intent(Profile.this, Borrow_History.class);
+            startActivity(i);
         });
 
     }

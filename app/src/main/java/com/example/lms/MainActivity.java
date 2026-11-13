@@ -41,6 +41,15 @@ public class MainActivity extends Activity {
             startActivity(i);
         });
 
+        // Register
+        tvRegister.setOnClickListener(v -> {
+            Intent i = new Intent(
+                    MainActivity.this,
+                    Register.class
+            );
+            startActivity(i);
+        });
+
 
     }
 }
