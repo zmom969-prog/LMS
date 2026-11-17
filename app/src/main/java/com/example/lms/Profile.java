@@ -60,6 +60,12 @@ public class Profile extends AppCompatActivity {
            Intent i = new Intent(Profile.this, Notification.class);
            startActivity(i);
        });
+
+
+        btnPrivacy.setOnClickListener(v -> {
+            Intent i = new Intent(Profile.this, FavoriteBook.class);
+            startActivity(i);
+        });
     }
 
 }
