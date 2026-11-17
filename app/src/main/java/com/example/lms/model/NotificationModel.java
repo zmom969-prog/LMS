@@ -4,17 +4,17 @@ public class NotificationModel {
     private String title;
     private String message;
     private String time;
-    private int cardColor; // កូដពណ៌សម្រាប់ Card នីមួយៗ
+    private int backgroundColor;
 
-    public NotificationModel(String title, String message, String time, int cardColor) {
+    public NotificationModel(String title, String message, String time, int backgroundColor) {
         this.title = title;
         this.message = message;
         this.time = time;
-        this.cardColor = cardColor;
+        this.backgroundColor = backgroundColor;
     }
 
     public String getTitle() { return title; }
     public String getMessage() { return message; }
     public String getTime() { return time; }
-    public int getCardColor() { return cardColor; }
+    public int getBackgroundColor() { return backgroundColor; }
 }

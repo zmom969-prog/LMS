@@ -56,10 +56,10 @@ public class Profile extends AppCompatActivity {
         });
 
 
-        btnNotifications.setOnClickListener(v -> {
-            Intent i = new Intent(Profile.this,Borrow_History.class);
-            startActivity(i);
-        });
+       btnNotifications.setOnClickListener(v -> {
+           Intent i = new Intent(Profile.this, Notification.class);
+           startActivity(i);
+       });
     }
 
 }
