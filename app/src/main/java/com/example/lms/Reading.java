@@ -101,10 +101,7 @@ public class Reading extends AppCompatActivity {
 
         // Intent
 
-        btnBack.setOnClickListener(v -> {
-            Intent i = new Intent(Reading.this, Borrow_History.class);
-            startActivity(i);
-        });
+
 
     }
 }

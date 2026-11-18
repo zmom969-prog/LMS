@@ -56,8 +56,14 @@ public class Profile extends AppCompatActivity {
         });
 
 
-        btnNotifications.setOnClickListener(v -> {
-            Intent i = new Intent(Profile.this,Borrow_History.class);
+       btnNotifications.setOnClickListener(v -> {
+           Intent i = new Intent(Profile.this, Notification.class);
+           startActivity(i);
+       });
+
+
+        btnPrivacy.setOnClickListener(v -> {
+            Intent i = new Intent(Profile.this, FavoriteBook.class);
             startActivity(i);
         });
     }

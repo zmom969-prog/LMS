@@ -50,11 +50,15 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+<<<<<<< HEAD
             android:name=".HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".FavoriteActivity"
+=======
+            android:name=".FavoriteBook"
+>>>>>>> ba9789c3dab37d0b9f36f5fcd1ec25416fef47a2
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
