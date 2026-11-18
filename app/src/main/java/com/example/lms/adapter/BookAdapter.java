@@ -1,4 +1,4 @@
-package com.example.lms;
+package com.example.lms.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.lms.Book;
+import com.example.lms.R;
 
 import java.util.List;
 
