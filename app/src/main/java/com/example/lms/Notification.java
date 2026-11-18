@@ -99,10 +99,10 @@ public class Notification extends AppCompatActivity {
             // finish();
         });
 
+
         navBorrow.setOnClickListener(v -> {
-            // Intent intent = new Intent(NotificationActivity.this, BorrowActivity.class);
-            // startActivity(intent);
-            // finish();
+            Intent i = new Intent(Notification.this, Borrow_History.class);
+            startActivity(i);
         });
 
         navProfile.setOnClickListener(v -> {
